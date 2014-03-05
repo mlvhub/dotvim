@@ -1,0 +1,5 @@
+Install Vundle's Bundles
+vim +BundleInstall +qall
+
+TODO
+- Document required process to install YCM

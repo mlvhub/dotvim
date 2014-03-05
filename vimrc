@@ -11,14 +11,15 @@ Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-surround"
 Bundle "tpope/vim-cucumber"
 Bundle "tpope/vim-haml"
-Bundle "msanders/snipmate.vim"
 Bundle "vim-ruby/vim-ruby"
 Bundle "scrooloose/syntastic"
 Bundle "scrooloose/nerdtree"
 Bundle "mattn/emmet-vim"
-Bundle "vim-scripts/conque-shell"
 Bundle "derekwyatt/vim-scala"
 Bundle "Valloric/YouCompleteMe"
+Bundle "pangloss/vim-javascript"
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 
 filetype indent on
 filetype plugin on
@@ -32,11 +33,17 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 colorscheme distinguished
 
 let mapleader = ","
-nnoremap <Leader>h <C-W>h
-nnoremap <Leader>j <C-W>j
-nnoremap <Leader>k <C-W>k
-nnoremap <Leader>l <C-W>l
-nnoremap <Leader>e <C-Y>,
+nnoremap <Leader>a <C-W>h
+nnoremap <Leader>s <C-W>j
+nnoremap <Leader>w <C-W>k
+nnoremap <Leader>d <C-W>l
+
+"" YouCompleteMe
+let g:ycm_key_list_previous_completion=['<Up>']
+
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 syntax enable
 "set foldmethod=syntax

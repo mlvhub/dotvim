@@ -5,21 +5,28 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " My Bundles
+" General Bundles"
+Bundle "vim-ruby/vim-ruby"
+Bundle "scrooloose/syntastic"
+Bundle "scrooloose/nerdtree"
+Bundle "mattn/emmet-vim"
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
+Bundle "Raimondi/delimitMate"
+
+" Ruby & Rails Bundles"
 Bundle "tpope/vim-rails"
 Bundle "tpope/vim-rake"
 Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-surround"
 Bundle "tpope/vim-cucumber"
 Bundle "tpope/vim-haml"
-Bundle "vim-ruby/vim-ruby"
-Bundle "scrooloose/syntastic"
-Bundle "scrooloose/nerdtree"
-Bundle "mattn/emmet-vim"
+
+" Scala Bundles"
 Bundle "derekwyatt/vim-scala"
-Bundle "Valloric/YouCompleteMe"
+
+" Javascript Bundles"
 Bundle "pangloss/vim-javascript"
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
 
 filetype indent on
 filetype plugin on

@@ -1,7 +1,7 @@
 set nocompatible              " be iMproved
 filetype off                  " required!
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 " My Bundles
@@ -26,7 +26,10 @@ Bundle "tpope/vim-haml"
 Bundle "derekwyatt/vim-scala"
 
 " Javascript Bundles"
-Bundle "pangloss/vim-javascript"
+Bundle 'walm/jshint.vim'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'moll/vim-node'
+Bundle 'jelera/vim-javascript-syntax'
 
 filetype indent on
 filetype plugin on
@@ -37,16 +40,20 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-colorscheme distinguished
+set t_Co=256
+colorscheme twilight
 
 let mapleader = ","
-nnoremap <Leader>a <C-W>h
-nnoremap <Leader>s <C-W>j
-nnoremap <Leader>w <C-W>k
-nnoremap <Leader>d <C-W>l
+nnoremap <Leader>h <C-W>h
+nnoremap <Leader>j <C-W>j
+nnoremap <Leader>k <C-W>k
+nnoremap <Leader>l <C-W>l
 
-"" YouCompleteMe
-let g:ycm_key_list_previous_completion=['<Up>']
+inoremap <Leader>q <Esc>
+
+nnoremap <Leader>w :w<CR>
+
+let g:user_emmet_leader_key='<C-Z>'
 
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"

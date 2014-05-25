@@ -13,6 +13,7 @@ Bundle "mattn/emmet-vim"
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle "Raimondi/delimitMate"
+Bundle 'kien/ctrlp.vim'
 
 " Ruby & Rails Bundles"
 Bundle "tpope/vim-rails"

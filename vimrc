@@ -6,14 +6,16 @@ call vundle#rc()
 
 " My Bundles
 " General Bundles"
+Bundle "gmarik/Vundle.vim"
 Bundle "vim-ruby/vim-ruby"
 Bundle "scrooloose/syntastic"
 Bundle "scrooloose/nerdtree"
 Bundle "mattn/emmet-vim"
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
 Bundle "Raimondi/delimitMate"
 Bundle 'kien/ctrlp.vim'
+Bundle 'bling/vim-airline'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 
 " Ruby & Rails Bundles"
 Bundle "tpope/vim-rails"
@@ -25,6 +27,7 @@ Bundle "tpope/vim-haml"
 
 " Scala Bundles"
 Bundle "derekwyatt/vim-scala"
+Bundle 'gre/play2vim'
 
 " Javascript Bundles"
 Bundle 'walm/jshint.vim'
@@ -54,6 +57,10 @@ inoremap <Leader>q <Esc>
 
 nnoremap <Leader>w :w<CR>
 
+imap <Leader>x <C-\>
+
+let g:ctrlp_cmd = 'CtrlP pwd'
+
 let g:user_emmet_leader_key='<C-Z>'
 
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -76,6 +83,7 @@ set showmatch
 
 set list
 set number
+set relativenumber
 set visualbell
 set cursorline
 set background=dark

@@ -1,5 +1,14 @@
+Create a symlink for vimrc
+ln -s ~/.vim/vimrc ~/.vimrc
+
+Install Vundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 Install Vundle's Bundles
 vim +BundleInstall +qall
+
+Create a symlink for custom scala snippets
+
 
 TODO
 - Document required process to install YCM

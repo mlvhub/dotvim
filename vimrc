@@ -67,6 +67,8 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|platforms|target|dist|www)|(\.(swp|ico|git|svn))$'
+
 syntax enable
 "set foldmethod=syntax
 set ignorecase

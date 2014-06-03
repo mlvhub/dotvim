@@ -24,3 +24,25 @@ snippet def "Function"
 def ${1:name}(${2:${3:paramName}: ${4:paramType}}): ${5:returnType} =
 	
 endsnippet
+
+snippet spec "Spec Template"
+package ${1:org}.${2:package}
+
+import org.scalatest.{WordSpec, Matchers}
+
+class ${3:classname}Spec extends WordSpec with Matchers {
+	${4}
+}
+endsnippet
+
+snippet should "Should"
+"${1:description}" should {
+	${2}
+}
+endsnippet
+
+snippet in "In"
+"${1:description}" in {
+	${2}
+}
+endsnippet

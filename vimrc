@@ -16,6 +16,11 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'Yggdroot/indentLine'
+Bundle 'Keithbsmiley/investigate.vim'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'ervandew/supertab'
 
 " Ruby & Rails Bundles"
 Bundle "tpope/vim-rails"
@@ -35,6 +40,8 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'moll/vim-node'
 Bundle 'jelera/vim-javascript-syntax'
 
+" Python Bundles"
+
 filetype indent on
 filetype plugin on
 
@@ -45,13 +52,15 @@ autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 set t_Co=256
-colorscheme twilight
+colorscheme distinguished
 
 let mapleader = ","
 nnoremap <Leader>h <C-W>h
 nnoremap <Leader>j <C-W>j
 nnoremap <Leader>k <C-W>k
 nnoremap <Leader>l <C-W>l
+
+:nnoremap <Leader>d :!zeal --query "<cword>"&<CR><CR>
 
 inoremap <Leader>q <Esc>
 

@@ -7,7 +7,6 @@ call vundle#rc()
 " My Bundles
 " General Bundles"
 Bundle "gmarik/Vundle.vim"
-Bundle "vim-ruby/vim-ruby"
 Bundle "scrooloose/syntastic"
 Bundle "scrooloose/nerdtree"
 Bundle "mattn/emmet-vim"
@@ -16,13 +15,16 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'Yggdroot/indentLine'
 Bundle 'Keithbsmiley/investigate.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'ervandew/supertab'
+Bundle 'wavded/vim-stylus'
+Bundle 'Shougo/neocomplcache.vim'
+Bundle 'altercation/vim-colors-solarized'
 
 " Ruby & Rails Bundles"
+Bundle "vim-ruby/vim-ruby"
 Bundle "tpope/vim-rails"
 Bundle "tpope/vim-rake"
 Bundle "tpope/vim-fugitive"
@@ -39,6 +41,11 @@ Bundle 'walm/jshint.vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'moll/vim-node'
 Bundle 'jelera/vim-javascript-syntax'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'burnettk/vim-angular'
+Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'matthewsimo/angular-vim-snippets'
+Bundle 'claco/jasmine.vim'
 
 " Python Bundles"
 
@@ -51,8 +58,11 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-set t_Co=256
-colorscheme distinguished
+set t_Co=16
+syntax on
+set background=dark
+let g:solarized_termcolors=16
+colorscheme solarized
 
 let mapleader = ","
 nnoremap <Leader>h <C-W>h
@@ -78,7 +88,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|platforms|target|dist|www)|(\.(swp|ico|git|svn))$'
 
-syntax enable
 "set foldmethod=syntax
 set ignorecase
 set hlsearch

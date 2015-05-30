@@ -47,6 +47,9 @@ Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'matthewsimo/angular-vim-snippets'
 Bundle 'claco/jasmine.vim'
 
+" Elm Bundles"
+Bundle "lambdatoast/elm.vim"
+
 " Python Bundles"
 
 filetype indent on
